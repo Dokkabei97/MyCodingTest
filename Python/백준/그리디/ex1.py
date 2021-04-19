@@ -9,10 +9,13 @@
 n = int(input())
 result = 0
 
-sugar = [3, 5]
+sugar = [5, 3]
 
 for x in sugar:
     result += n // x
     n %= x
+    if n % x == 1:
+        result = -1
+        break
 
 print(result)
